@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/mercy-auth/mercy-auth.iml" filepath="$PROJECT_DIR$/mercy-auth/mercy-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mercy-common/mercy-common.iml" filepath="$PROJECT_DIR$/mercy-common/mercy-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mercy-discovery/mercy-discovery.iml" filepath="$PROJECT_DIR$/mercy-discovery/mercy-discovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mercy-master.iml" filepath="$PROJECT_DIR$/mercy-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mercy-modules/mercy-modules.iml" filepath="$PROJECT_DIR$/mercy-modules/mercy-modules.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mercy-modules/mercy-moudle.iml" filepath="$PROJECT_DIR$/mercy-modules/mercy-moudle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mercy-modules/mercy-uac-service/mercy-uac-service.iml" filepath="$PROJECT_DIR$/mercy-modules/mercy-uac-service/mercy-uac-service.iml" />
+    </modules>
+  </component>
+</project>

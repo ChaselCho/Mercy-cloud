@@ -1,0 +1,37 @@
+ spring:
+  application:
+    name: mercy-upms-service
+  profiles:
+    active: dev
+  cloud:
+    config:
+      fail-fast: true
+      discovery:
+        service-id: mercy-config-server
+        enabled: true
+      profile: ${spring.profiles.active}
+      label: ${spring.profiles.active}
+
+---
+spring:
+  profiles: dev
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
+        health-check-path: /actuator/health
+        health-check-interval: 5s
+
+---
+spring:
+  profiles: prd
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
+        health-check-path: /actuator/health
+        health-check-interval: 5s

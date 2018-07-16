@@ -1,0 +1,45 @@
+server:
+  port: 4001
+spring:
+  application:
+    name: mercy-discovery
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: fcao
+    password: fcao
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+        health-check-path: /actuator/health
+        health-check-interval: 5s
+    config:
+      server:
+        git:
+          uri: https://gitee.com/chasel1211/sst-config.git
+          default-label: ${spring.profiles.active}
+---
+spring:
+  profiles: prd
+  cloud:
+    config:
+      retry:
+        initial-interval: 3000
+        multiplier: 1.5
+        max-interval: 20000
+        max-attempts: 6
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        health-check-path: /actuator/health
+        healthCheckInterval: 5s

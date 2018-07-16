@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mercy-auth" />
+        <module name="mercy-common" />
+        <module name="mercy-discovery" />
+        <module name="mercy-moudle" />
+        <module name="mercy-uac-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mercy-auth" target="1.8" />
+      <module name="mercy-common" target="1.8" />
+      <module name="mercy-discovery" target="1.8" />
+      <module name="mercy-master" target="1.5" />
+      <module name="mercy-modules" target="1.5" />
+      <module name="mercy-moudle" target="1.8" />
+      <module name="mercy-uac-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
